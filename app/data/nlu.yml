@@ -1,0 +1,299 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: search
+  examples: |
+    - I want to purchase [Sugar](product)
+    - How about some [buiscuits](product)
+    - What do you have in [rice](product)
+    - I want to purchase some [mogra](product) to my basket
+    - I also need a [toothpaste](product)
+    - Can I have some [chocolate](product)
+    - I want 5 [biscuit](product) packets.
+    - I'll like some brown [sugar](product) please.
+    - Do you have [toothpaste](product) available?
+    - Show me what you have in [sweets](product).
+    - Display the best selling [cookies](product).
+    - Can I see chocolate [cookies](product) under [100 rupees](price)?
+    - I want to purchase [snacks](product) under [50 bucks](price).
+    - I also need some [popcorn](product).
+    - Get me rice barn [oil](product) please.
+    - What is selling well in [electronic appliances](category)?
+    - What do you have available from [Johnson's Baby](brand)
+    - Do you have items from [MSI](brand)
+    - Can I have a [chocolate](product) by Cadbury(brand)?
+    - Are [Puma](brand) shoes available
+    - Show me what you have from [Cadbury](brand).
+    - What do you have from [Pepe Jeans](brand)
+    - Display items by [US  Polo](brand)
+    - What are the best selling [Samsung](brand) items?
+    - Show [Xiaomi](brand) [phones](category) under [20000 bucks](price).
+    - Show me the highest rated [Apple](brand) products.
+    - I want to by some [pet food](category)
+    - let's start from [Vegetables](category)
+    - I need [Sunflower](brand) [Oil](product)
+    
+- intent: add
+  examples: |
+    - I would like some [marie](brand) [biscuits](product) please
+    - I like only [basmati](brand) [rice](product) from [India Gate](brand)
+    - I use [himalayan](brand) [sparklin](product) white usually
+    - add some 60 grams weight [sugar](product) packet please
+    - Add the second item to my cart/basket please.
+    - Add the plastic bottle to my cart.
+    - I would also want Cadbury Dairy Milk in my cart.
+    - Add 4 of the third item to my cart.
+    - Also add item one and two.
+    - I need 4 tubes of himalyan sparkling white.
+    - Add the first two items to my cart.
+    - If OnePlus Nord is available, add the 128 gb model.
+    - Can you please add the 1 kg packet to my cart.
+    - Please add the cheapest one to my cart.
+    - Add refined oil 500 ml by sunflower to my cart.
+    - Add the 250 bucks packet to my cart.
+    - I want that 12 bucks packet
+    
+    
+- lookup: product
+  examples: |
+    - Sugar
+    - buiscuits
+    - rice
+    - mogra
+    - toothpaste
+    - sparklin
+    - Oil
+    - chocolate
+    - sweets
+    - cookies
+    - snacks
+    - popcorn
+    - Apples
+    - Primer
+    - Master Intense
+    - Turbo
+    - TV
+    - Plus VX
+    - Sunglasses
+    - Shampoo
+    - Detergent Bar
+    - Watch
+    - Smart
+    - Oranges
+    - Whisk beater steel coil
+    - Toor Dal
+    - Crimson Clock
+    - iPhone 12 Pro Max
+    - Frost free
+    - Unifactor
+    - Key Holder
+    - Zold Runner
+    - Casual Top
+    - Prime
+    - Biscuits
+    - Fusion
+    - Sugar
+    - Tee
+    - Jelly Cat Treat
+    - Lays
+    - Potatoes
+    - A32
+    - Anti-bacterial Hand Wash
+    - chakki fresh atta
+    - Onions
+    - AC
+    - Pro
+    - Freshwrapp Aluminium Foil
+    - premium suji rusk
+    - Shoe Polish
+    - Kurta
+    - Sewing Machine
+    - sandal
+    - turmeric soap
+    - double door
+    - fresh brown raw peanut
+    - Polypropylene Fridge Container
+    - Automatic Voltage Stabilizer
+    - Rapid Peeler
+    - Water Purifier
+    - Shirt
+    - Aer Assorted Blocks
+    - Batteries
+    - Bedsheet
+    - AC
+    - banana
+    - Revolution
+  
+    
+
+- lookup: category
+  examples: |
+    - Accessories
+    - Air Conditioners
+    - Beauty and grooming
+    - Beauty andgrooming
+    - Bedsheets
+    - Fruits
+    - Health
+    - phones
+    - Home Appliances
+    - Home Decor
+    - Home and Kitchen
+    - Household Care
+    - Personal care
+    - Pet Food
+    - Phones
+    - Refridgerators
+    - Shoe Care
+    - Snacks and beverages
+    - Sports
+    - Sports Shoes
+    - Televisions
+    - Vegetables
+    - Washing Machines
+    - Watches
+    - grocery and essentials
+    - men clothing
+    - mobiles
+    - snacks and beverages
+    - women clothing
+
+- lookup: brand
+  examples: |
+    - Colorbar
+    - FOGG
+    - Whirlpool
+    - Mi
+    - Senator
+    - United Colors of Benetton
+    - Loreal Paris
+    - Rin
+    - Fastrack
+    - Samsung
+    - KVG
+    - APPLE
+    - Godrej
+    - ADIDAS
+    - WORA
+    - PUMA
+    - Vero Moda
+    - REDMI
+    - Oreo
+    - MOTOROLA40
+    - Madhur
+    - Flying Machine
+    - Whiskas
+    - Titan
+    - Samsung galaxy
+    - Natural
+    - Pilsbury
+    - Panasonic
+    - Oneplus
+    - HINDALCO
+    - Britania
+    - Cherry Blossom
+    - Aurelia
+    - Zigzag
+    - Santoor
+    - Whitrlpool
+    - Origo
+    - MASTER COOK
+    - KOOK
+    - KENT
+    - Van Heusen
+    - Godrej
+    - Energizer
+    - Chavi
+    - Samsung
+    - Robusta
+    - NIKE

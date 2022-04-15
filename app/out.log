@@ -1,0 +1,94 @@
+2021-07-07 23:54:55,273 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id:path>/messages     POST                           add_message
+/conversations/<conversation_id:path>/tracker/events POST                           append_events
+/webhooks/rasa                                     GET                            custom_webhook_RasaChatInput.health
+/webhooks/rasa/webhook                             POST                           custom_webhook_RasaChatInput.receive
+/webhooks/rest                                     GET                            custom_webhook_RestInput.health
+/webhooks/rest/webhook                             POST                           custom_webhook_RestInput.receive
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id:path>/execute      POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id:path>/predict      POST                           predict
+/conversations/<conversation_id:path>/tracker/events PUT                            replace_events
+/conversations/<conversation_id:path>/story        GET                            retrieve_story
+/conversations/<conversation_id:path>/tracker      GET                            retrieve_tracker
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/conversations/<conversation_id:path>/trigger_intent POST                           trigger_intent
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2021-07-07 23:54:55,275 [INFO ]  Starting Rasa server on http://localhost:5005
+2021-07-07 23:54:55,276 [DEBUG]  Using the default number of Sanic workers (1).
+2021-07-07 23:54:55,285 [INFO ]  Loading model models\20210707-234459.tar.gz...
+2021-07-07 23:54:55,650 [DEBUG]  Extracted model to 'C:\Users\DeLL\AppData\Local\Temp\tmp1kib92z9'.
+2021-07-07 23:54:55,678 [DEBUG]  Starting new HTTPS connection (1): api.segment.io:443
+2021-07-07 23:54:57,307 [DEBUG]  https://api.segment.io:443 "POST /v1/track HTTP/1.1" 200 21
+2021-07-07 23:54:57,314 [INFO ]  Enabling coroutine debugging. Loop id 2222675234504.
+2021-07-07 23:54:57,317 [INFO ]  Loading model models\20210707-234459.tar.gz...
+2021-07-07 23:54:57,690 [DEBUG]  Extracted model to 'C:\Users\DeLL\AppData\Local\Temp\tmpdpbhdoqv'.
+2021-07-07 23:54:57,832 [DEBUG]  Loading the model from C:\Users\DeLL\AppData\Local\Temp\tmpdpbhdoqv\nlu\component_5_DIETClassifier.tf_model with finetune_mode=False...
+2021-07-07 23:54:57,910 [DEBUG]  Following metrics will be logged during training: 
+2021-07-07 23:54:57,912 [DEBUG]    t_loss (total loss)
+2021-07-07 23:54:57,914 [DEBUG]    i_acc (intent acc)
+2021-07-07 23:54:57,915 [DEBUG]    i_loss (intent loss)
+2021-07-07 23:54:57,916 [DEBUG]    e_f1 (entity f1)
+2021-07-07 23:54:57,917 [DEBUG]    e_loss (entity loss)
+2021-07-07 23:55:15,239 [DEBUG]  Finished loading the model.
+2021-07-07 23:55:15,250 [DEBUG]  Failed to load model for 'ResponseSelector'. Maybe you did not provide enough training data and no model was trained or the path 'C:\Users\DeLL\AppData\Local\Temp\tmpdpbhdoqv\nlu' doesn't exist?
+2021-07-07 23:55:15,277 [DEBUG]  Connected to InMemoryTrackerStore.
+2021-07-07 23:55:15,278 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2021-07-07 23:55:15,682 [DEBUG]  Extracted model to 'C:\Users\DeLL\AppData\Local\Temp\tmpbwdzy9x6'.
+2021-07-07 23:55:15,717 [DEBUG]  Loading the model from C:\Users\DeLL\AppData\Local\Temp\tmpbwdzy9x6\core\policy_2_TEDPolicy\ted_policy.tf_model with finetune_mode=False...
+2021-07-07 23:55:27,927 [DEBUG]  Finished loading the model.
+2021-07-07 23:55:27,932 [DEBUG]  Instantiated NLG to 'TemplatedNaturalLanguageGenerator'.
+2021-07-07 23:55:27,934 [INFO ]  Rasa server is up and running.
+2021-07-07 23:56:08,378 [DEBUG]  Issuing ticket for conversation 'tushar'.
+2021-07-07 23:56:08,380 [DEBUG]  Acquiring lock for conversation 'tushar'.
+2021-07-07 23:56:08,381 [DEBUG]  Acquired lock for conversation 'tushar'.
+2021-07-07 23:56:08,384 [DEBUG]  Could not find tracker for conversation ID 'tushar'.
+2021-07-07 23:56:08,386 [DEBUG]  Starting a new session for conversation ID 'tushar'.
+2021-07-07 23:56:08,388 [DEBUG]  Policy prediction ended with events '[]'.
+2021-07-07 23:56:08,389 [DEBUG]  Action 'action_session_start' ended with events '[<rasa.shared.core.events.SessionStarted object at 0x000002059F5E1108>, ActionExecuted(action: action_listen, policy: None, confidence: None)]'.
+2021-07-07 23:56:08,390 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-07-07 23:56:08,822 [DEBUG]  There is no trained model for 'ResponseSelector': The component is either not trained or didn't receive enough training data.
+2021-07-07 23:56:08,823 [DEBUG]  Adding following selector key to message property: default
+2021-07-07 23:56:08,826 [DEBUG]  Received user message 'I need some potatoes' with intent '{'id': 4044993421035995244, 'name': 'search', 'confidence': 0.9999992847442627}' and entities '[{'entity': 'product', 'start': 12, 'end': 20, 'value': 'potatoes', 'extractor': 'RegexEntityExtractor'}]'
+2021-07-07 23:56:08,828 [DEBUG]  Current slot values: 
+	session_started_metadata: None
+2021-07-07 23:56:08,829 [DEBUG]  Logged UserUtterance - tracker now has 4 events.
+2021-07-07 23:56:08,831 [DEBUG]  Current tracker state:
+[state 1] user intent: search | user entities: ('product',) | previous action name: action_listen
+2021-07-07 23:56:08,832 [DEBUG]  There is no memorised next action
+2021-07-07 23:56:08,834 [DEBUG]  Current tracker state:
+[state 1] user text: I need some potatoes | previous action name: action_listen
+2021-07-07 23:56:08,835 [DEBUG]  There is no applicable rule.
+2021-07-07 23:56:08,836 [DEBUG]  Current tracker state:
+[state 1] user intent: search | user entities: ('product',) | previous action name: action_listen
+2021-07-07 23:56:08,836 [DEBUG]  There is no applicable rule.
+2021-07-07 23:56:08,843 [DEBUG]  TED predicted 'utter_search' based on user intent.
+2021-07-07 23:56:08,847 [DEBUG]  Made prediction using user intent.
+2021-07-07 23:56:08,848 [DEBUG]  Added `DefinePrevUserUtteredFeaturization(False)` event.
+2021-07-07 23:56:08,852 [DEBUG]  Predicted next action using policy_2_TEDPolicy.
+2021-07-07 23:56:08,854 [DEBUG]  Predicted next action 'utter_search' with confidence 0.97.
+2021-07-07 23:56:08,855 [DEBUG]  Policy prediction ended with events '[<rasa.shared.core.events.DefinePrevUserUtteredFeaturization object at 0x000002059F3B21C8>]'.
+2021-07-07 23:56:08,856 [DEBUG]  Action 'utter_search' ended with events '[BotUttered('Here are some products in our stock', {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, {"utter_action": "utter_search"}, 1625682368.8551936)]'.
+2021-07-07 23:56:08,859 [DEBUG]  Current tracker state:
+[state 1] user intent: search | user entities: ('product',) | previous action name: action_listen
+[state 2] user intent: search | user entities: ('product',) | previous action name: utter_search
+2021-07-07 23:56:08,862 [DEBUG]  There is no memorised next action
+2021-07-07 23:56:08,863 [DEBUG]  Current tracker state:
+[state 1] user intent: search | user entities: ('product',) | previous action name: action_listen
+[state 2] user intent: search | user entities: ('product',) | previous action name: utter_search
+2021-07-07 23:56:08,869 [DEBUG]  There is no applicable rule.
+2021-07-07 23:56:08,876 [DEBUG]  TED predicted 'action_listen' based on user intent.
+2021-07-07 23:56:08,878 [DEBUG]  Predicted next action using policy_2_TEDPolicy.
+2021-07-07 23:56:08,881 [DEBUG]  Predicted next action 'action_listen' with confidence 0.99.
+2021-07-07 23:56:08,886 [DEBUG]  Policy prediction ended with events '[]'.
+2021-07-07 23:56:08,886 [DEBUG]  Action 'action_listen' ended with events '[]'.
+2021-07-07 23:56:08,887 [DEBUG]  Deleted lock for conversation 'tushar'.
